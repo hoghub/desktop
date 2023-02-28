@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import "https://i.icomoon.io/public/temp/5a74a685f0/hoghub/style.css";
+
+@import "modules/reset";
+
+:root {
+  --main-color: 14,16,15;
+  --main-color-light-1: 95, 99, 110;
+  --sub-color: 255, 255, 255;
+  --sub-color-dark-1: 244, 246, 250;
+  --sub-color-dark-2: 225, 227, 231;
+
+  --neutral-color: 72,53,20;
+
+  --error-color: 204, 0, 0;
+  --success-color: 59, 185, 131;
+  --info-color: 251, 192, 45;
+
+  --interface-size: 800px;
+  --nav-size: 50px;
+  --scrollbar-width: 8px;
+
+  --radius-little: 5px;
+  --radius-medium: 10px;
+
+  --spacing-small: 5px;
+  --spacing-little: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+
+  --width-small: calc(100% - var(--spacing-small) * 2);
+  --width-little: calc(100% - var(--spacing-little) * 2);
+  --width-medium: calc(100% - var(--spacing-medium) * 2);
+  --width-large: calc(100% - var(--spacing-large) * 2);
+
+  --alert-color: 154, 49, 49;
+  --alert-color-dark-1: 115, 37, 37;
+}
+
+body {
+  color: rgba(var(--sub-color), 0.84);
+  background-color: #171e1d;
+}
+
+body, input {
+  font-family:
+          "Open Sans",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen-Sans,
+          Ubuntu,
+          Cantarell,
+          "Helvetica Neue",
+          sans-serif;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--main-color));
+  border-radius: var(--radius-medium);
+}
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/** Scrollbar lock **/
+
+.sl {
+  overflow: hidden;
+}
+
+.sf {
+  width: calc(100% - var(--scrollbar-width))!important;
+}
+
+.p {
+  padding: var(--spacing-little);
+
+  b {
+    font-weight: 700;
+  }
+}
+
+a {
+  color: rgb(var(--neutral-color-1));
+}
+
+.box {
+  background-color: rgb(var(--main-color));
+  border-radius: var(--radius-medium);
+  box-shadow: 0 0 10px rgba(var(--sub-color), 0.05);
+  border: 1px solid rgba(var(--sub-color), 0.05);
+  transition: all ease-in-out 200ms;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(var(--sub-color), 0.08);
+  }
+}
+
+.gt {
+  background: #CC5DAB;
+  background: linear-gradient(to right, #CC5DAB 0%, #E6B055 25%, #B9CB54 50%, #5CC1D8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes top-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes error-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+    padding-top: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: 5px;
+    height: 20px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes breathing  {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
